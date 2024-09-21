@@ -1,0 +1,16 @@
+<p>father works!</p>
+<app-son 
+    mensaje = "Hola, soy el hijo"
+    [name] = "name"
+    [age]="age"
+    (emitirFristName)="recibirFirstName($event)"
+    (emitirLastName)="recibirLastName($event)"
+    (emitirGender)="recibirGender($event)"
+    (outputContador)="recibirContador($event)"
+    [listUser]="listUser"/>
+
+<h1> {{firstName}} </h1>
+<br>
+<h1> {{lastName}} </h1>
+<br>
+<h1> {{gender}} </h1>

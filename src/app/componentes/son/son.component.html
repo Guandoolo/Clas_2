@@ -1,0 +1,29 @@
+<p>son works!</p>
+<p>{{mensaje}}</p>
+<h1>{{ name }}</h1>
+<!-- <h2>{{ lastName }}</h2> -->
+<h1>{{ age }}</h1>
+<button (click)="masAge()">+</button>
+<button (click)="menosAge()">-</button>
+<br><br>
+
+<form >
+    <div>
+        <label >Nombres...</label>
+        <input name="names" [(ngModel)]="firstName">
+        <br>
+        <label >Apellido...</label>
+        <input name="lastName" [(ngModel)]="lastName">
+        <br>
+        <label >Genero...</label>
+        <input name="gender" [(ngModel)]="gender">
+        <button (click)="send()">Enviar</button>
+    </div>
+
+    <div *ngFor="let user of listUser">
+        <p>{{ user.firstName }}</p>
+        <p>{{ user.lastName}}</p>
+        <p>{{ user.age}}</p>
+
+    </div>
+</form>
